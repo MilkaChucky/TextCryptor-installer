@@ -1,0 +1,2 @@
+# TextCryptor-installer
+TextCryptor installer
