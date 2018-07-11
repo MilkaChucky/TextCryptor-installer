@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="TextCryptor.exe" version="1.0.0.6" publicKeyToken="41080fbac2b3f90a" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Key.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="TextCryptor" version="1.0.0.6" language="neutral" processorArchitecture="msil" />
+    <commandLine file="TextCryptor.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+             If you want to change the Windows User Account Control level replace the 
+             requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel element will disable file and registry virtualization. 
+            Remove this element if your application requires this virtualization for backwards
+            compatibility.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CryptoUtils.dll" size="9728">
+      <assemblyIdentity name="CryptoUtils" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>HPzmWTg+8lzRouiij55z0mNuiZsfVPXL8WKo4F7pTWU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TextCryptor.exe" size="534944">
+      <assemblyIdentity name="TextCryptor" version="1.0.0.6" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>BNn+9LfTQA4H7xPUQc2R8HyDMO/0bQtCTfsE0oiML5k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Key.ico" size="169754">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>OAso2C6jYUGeDorxVMzDyLoCsvC47WA9KlmO0CocfhE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="TextCryptor.exe.config" size="163">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>l/VPfNqUVNQIPyQECM0xWlTJm+DXcPOne6oYsApBDIo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <fileAssociation extension=".key" description="Key file" progid="5e3083ed-8203-47c0-a59b-750e38d25b48" defaultIcon="Key.ico" xmlns="urn:schemas-microsoft-com:clickonce.v1" />
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of the Windows versions that this application has been tested on and is
+           is designed to work with. Uncomment the appropriate elements and Windows will 
+           automatically selected the most compatible environment. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=PETERS-PC\PeterS" issuerKeyHash="656b63d2d573d44fca3a4da40ac9fea1eefcbc83" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>JQKzC+Q3lauA3qpjR9b0hKGWmHk=</DigestValue></Reference></SignedInfo><SignatureValue>S3AkHl/x1LBVjp6YC0kcN59j+Idvopqzc6zI7FncGUyaZh78x/KuX7PWhnL+xb1W+wsxvGiJ/vc577kveB9BlQiYb2TexcmFMoSp4ZBO/nGB2/Zqm4z97B2TO3d4dkxibLgDAQTLYM6T5awsFrfOxBZyTg7X+ss+Nryk6eMN3aw=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>xkaTF8VjGtyVusVi5xQ/rn8fbo8Jv6DhRhzASv3Er4yEcX+GkgyhOH6ocKTlupb8u0NewR7HWfreofli9KYC7SH6M9j4Y5/NJ/8J4Jds5Bj5VqAiHpcK+dA1Ms4EFpT62EqQKS55NI82Iso6FRBOXE7J8FL8l8CT8K5oHrAWTrk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="799896a184f4d64763aade80ab9537e40bb30225" Description="" Url=""><as:assemblyIdentity name="TextCryptor.exe" version="1.0.0.6" publicKeyToken="41080fbac2b3f90a" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=PETERS-PC\PeterS</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>GMIoJunhv/yPRpJnsXCn8WrRu4M=</DigestValue></Reference></SignedInfo><SignatureValue>Qq05O+EfEHi3IKKWI2g6s2nfOG0AzwHUM613XuQ4CggUtNFsa6QGF/ba9sr0CabG3qUKR1TVPWCmzOjQWMQVXrhrfzyUD/TdsKKzUCZNrg5tAlb88thyuyYexBfoBf5QN9tyxT3JSbRPd7D6qAnyQW+hjU0UI4xvulS99FnmUDw=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xkaTF8VjGtyVusVi5xQ/rn8fbo8Jv6DhRhzASv3Er4yEcX+GkgyhOH6ocKTlupb8u0NewR7HWfreofli9KYC7SH6M9j4Y5/NJ/8J4Jds5Bj5VqAiHpcK+dA1Ms4EFpT62EqQKS55NI82Iso6FRBOXE7J8FL8l8CT8K5oHrAWTrk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB2TCCAUKgAwIBAgIQGe9frMao7IxHoC5pXGjrjTANBgkqhkiG9w0BAQUFADArMSkwJwYDVQQDHiAAUABFAFQARQBSAFMALQBQAEMAXABQAGUAdABlAHIAUzAeFw0xODAxMjAxOTA2MDhaFw0xOTAxMjEwMTA2MDhaMCsxKTAnBgNVBAMeIABQAEUAVABFAFIAUwAtAFAAQwBcAFAAZQB0AGUAcgBTMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDGRpMXxWMa3JW6xWLnFD+ufx9ujwm/oOFGHMBK/cSvjIRxf4aSDKE4fqhwpOW6lvy7Q17BHsdZ+t6h+WL0pgLtIfoz2Phjn80n/wngl2zkGPlWoCIelwr50DUyzgQWlPrYSpApLnk0jzYiyjoVEE5cTsnwUvyXwJPwrmgesBZOuQIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAAl7pUuU26ZjqFJ5xrVdirAc+udullPmmn/ns95q/0uZPEtMagK5EODVwFKGZa7rnxv7hWfo5wbJb32t6EVFNRcDQ8DYecuNfoGQ6SZDBy1aq0NIJZL0kkBopA1X5Lp26If3Gc01LR6qKDKUyMvboC/9jhlwYBPV9cgTEYvcp/rL</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
